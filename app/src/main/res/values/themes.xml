@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="CustomLabel" >
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">#1c1c1c</item>
         <item name="android:padding">10dp</item>
     </style>

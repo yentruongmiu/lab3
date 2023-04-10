@@ -22,138 +22,138 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Sign in to your account"
-        android:textSize="24sp"
+        android:text="Sign into your account"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="fill_vertical"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle">
 
-        <TextView
-            android:id="@+id/tvEmail"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="355dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Email address (required)"
-            android:textSize="18sp"
-            />
-
-        <EditText
-            android:id="@+id/etEmailAddress"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edit_text_background"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
-
-        <TextView
-            android:id="@+id/tvPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="20dp"
-            android:text="Password (required)"
-            android:textSize="18sp"
-            />
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edit_text_background"
-            android:ems="10"
-            android:inputType="textPassword" />
-
-
-        <TextView
-            android:id="@+id/tvForgotPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:autoLink="all"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="5dp"
-            android:layout_marginRight="19dp"
-            android:textStyle="bold"
-            android:text="Forgot password?" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_weight="1" />
-        <Button
-            android:id="@+id/btnSignIn"
             android:layout_gravity="center_horizontal"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:textAllCaps="false"
-            android:backgroundTint="@color/app_main_color"
-            android:text="Sign In"
-            />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp">
-
-            <View android:layout_toStartOf="@id/tvNoAcc"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="8dp"
-                android:background="@android:color/black"/>
+            android:gravity="fill_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
 
             <TextView
-                android:id="@+id/tvNoAcc"
+                android:id="@+id/tvEmail"
+                style="@style/CustomLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email address (required)" />
+
+            <EditText
+                android:id="@+id/etEmailAddress"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edit_text_background"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                style="@style/CustomLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password (required)" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/CustomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:inputType="textPassword" />
+
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Don't have an account?"
-                android:textSize="20sp"
+                android:layout_gravity="right"
+                android:autoLink="all"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:text="Forgot password?"
                 android:textStyle="bold" />
 
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="20dp"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/tvNoAcc"
-                android:background="@android:color/black"/>
-        </RelativeLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/btnCreateNewAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:backgroundTint="@color/white"
-            android:text="Create a new account"
-            android:textAllCaps="false"
-            android:textColor="@color/app_main_color"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/app_main_color"
+                android:text="Sign In"
+                android:textAllCaps="false" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@id/tvNoAcc"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvNoAcc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Don't have an account?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@id/tvNoAcc"
+                    android:background="@android:color/black" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnCreateNewAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="@color/white"
+                android:text="Create a new account"
+                android:textAllCaps="false"
+                android:textColor="@color/app_main_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
