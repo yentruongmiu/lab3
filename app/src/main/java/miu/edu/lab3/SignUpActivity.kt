@@ -27,6 +27,7 @@ class SignUpActivity : AppCompatActivity() {
                     binding.etEmailAddress.text.toString(),
                     binding.etPassword.text.toString())
             }
+
             user?.let {
                 startActivity(Intent(this, MainActivity::class.java).apply {
                     putExtra("user", it)
